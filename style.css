@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+img{vertical-align: top;}
+button{background-color: transparent; border: 0;}
+
+#wrapper{/*id호출*/
+    min-width: 320px;
+}
+/*브라우저 너비에 대응하는 최소 사이즈를 제한함*/
+
+.popup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #747b8e;
+    padding: 0 15px;
+    height: 56px;
+}
+.popup .tit{
+    display: flex;
+    align-items: center;
+}
+.popup .tit .ico img{
+    width: 28px;
+}
+.popup .tit .txt{
+    margin-left: 10px;
+    font-size: 12px;
+    color: #fff;
+}
+.popup .btns{
+   
+    display: flex;
+    align-items: center;
+}
+.popup .btns .app-down img{height: 28px;}
+.popup .btns .pop-close{
+    margin-left: 10px;
+}
+.popup .btns .pop-close button{
+    /*
+    background-color: rgba(0,0,0,0);
+    */
+    background-color: transparent;
+    height: 100%;
+    border: 0;
+}
+.popup .btns .pop-close button img{
+    width: 15px;
+}
+
+header{
+    border-bottom: 1px solid #ccc;
+}
+header .top{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 15px;
+}
+header .top h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    font-size: 0;
+    /* 이미지를 넣었을 때, 공백이 발생하면 부모에게 font-size: 0; */
+}
+header .top h1 img{
+    height: 20px;
+}
+header .top .nav-opn button{
+    height: 50px;
+}
+header .top .nav-opn button img{
+    height: 22px;
+}
+header .top .btn-src{
+    margin-left: auto;
+}
+header .top .btn-src button{
+    height: 50px;
+}
+header .top .btn-src img{
+    height: 30px;
+}
+header .top .btn-my{
+    margin-left: 12px;
+}
+header .top .btn-my a{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+header .top .btn-my img{
+    height: 30px;
+}
+
+header .bottom{
+    display: flex;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+header .bottom nav{
+    width: 100%;
+    display: flex;
+
+    /* 네비게이션 수평 스크롤 */
+    /* overflow-x: scroll; */
+}
+header .bottom nav .slider{
+    display: flex;
+
+    /* 네비게이션 수평 스크롤 */
+    /* width: max-content; */
+    /* 구형브라우저에서 작동 안됨. */
+}
+header .bottom nav .nav-item{
+    width: 100%;
+    /*flex 박스들에게 w 100%를 주면
+        각 박스가 가질 수 있는 최대 너비를 알아서 가짐
+    */
+    
+
+    /* 네비게이션 수평 스크롤 */
+    /* min-width: max-content; */
+}
+
+header .bottom nav .nav-item.active{
+    color: #f06;
+    border-bottom: 2px solid #f06;
+}
+
+header .bottom nav .nav-item a{
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+header .bottom .btn-nav-more{
+    
+}
+header .bottom .btn-nav-more button{
+    width: 44px;
+    height: 50px;
+    border-left: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+header .bottom .btn-nav-more button img{
+    width: 18px;
+}
+
+header .bottom .btn-nav-more .nav-expand{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    
+    flex-wrap: wrap;
+    padding: 8px;
+    box-sizing: border-box;
+    /* 보더의 두께까지 공간값에 포함시키는 속성
+        보더 내부에 있는 공간인 패딩까지도 함께 포함됨
+    */
+}
+header .bottom .btn-nav-more:hover .nav-expand{display: flex;}
+header .bottom .btn-nav-more .nav-expand .sub-nav-item{
+    border: 1px solid #ccc;
+    padding: 11px 0;
+    width: calc((100% - 26px) / 3);
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+header .bottom .btn-nav-more .nav-expand .sub-nav-item:nth-child(3n){
+    margin-right: 0;
+}
+header .bottom .btn-nav-more .nav-expand .sub-nav-item:nth-child(1n + 7){
+    margin-bottom: 0;
+}
+header .bottom .btn-nav-more .nav-expand .sub-nav-item a{
+    display: block;
+    padding: 11px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+
+.banner .page{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    padding: 5px 12px;
+    border-radius: 100px;
+    /* 알약형태는 막연한 큰 값 주기! */
+}
